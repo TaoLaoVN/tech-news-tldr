@@ -33,7 +33,7 @@ try:
     
     # Đọc dữ liệu (Thay 'TinTucTech' bằng tên Tab sheet của bạn)
     # TTL="10m" nghĩa là cache 10 phút mới tải lại 1 lần để đỡ tốn quota
-    df = conn.read(worksheet="news", ttl="1m")
+    df = conn.read(worksheet="news_rows", ttl="1m")
     
     # Chuyển đổi cột thời gian để sắp xếp
     if 'published_at' in df.columns:
@@ -96,4 +96,5 @@ else:
 # Nút Footer
 st.markdown("---")
 st.caption("Made with ❤️ by Streamlit & Gemini AI")
+
 
